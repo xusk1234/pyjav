@@ -3,7 +3,10 @@ import zipfile
 import tempfile
 import pyfiglet
 import subprocess
+from check import cj21
 print(pyfiglet.figlet_format("javpy - 21"))
+if not cj21():
+    sys.exit()
 a=sys.argv
 sp=a.pop(0)
 temp=tempfile.TemporaryDirectory()
